@@ -45,7 +45,15 @@ public class Prim {
 	}
 
 	public void addEdge(int i, int j, int d) {
-		throw new UnsupportedOperationException("To funkcijo morate implementirati");
+		// doda d v data[i][j]== data[j][i]
+		if ( data.length > i &&
+			data[0].length > j &&
+			data.length > j &&
+			data[0].length > i ) {
+
+			data[i][j]= d;
+			data[j][i]= d;
+		}
 	}
 
 	public int MSTcost() {
